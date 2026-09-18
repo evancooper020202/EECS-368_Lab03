@@ -17,10 +17,10 @@
     Border Width<br>
     <input type="number" id='width' value='1'><br>
 
-    <button onclick='changeStyle()'>Change</button><br><br>
+    <button onclick="changeStyle()">Change</button><br><br>
 
-    <div id='box' style="border: 1px solid black line: padding: 10px;">
-	    <div>
+    <div id='box' style="border: 1px solid black line; padding: 10px;">
+	    </div>
     <script>
 	    function changeStyle() {
 		    var r = document.getElementById("red").value;
@@ -29,7 +29,7 @@
 		    var w = document.getElementById("width").value;
 
 		    var box document.getElementById("box");
-		    box.style.color = "rgb(" + r + ", " + g + "," + b + ")";
+		    box.style.color = r+g+b;
 		    box.style.borderWidth = w + "px";
 	    }
 
