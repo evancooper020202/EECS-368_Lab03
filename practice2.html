@@ -5,23 +5,36 @@
 </head>
 
 <body>
-    Color Changes?<br>
-    <input type="color" id='myColor' oninput='changeStyle()'><br>
+    Red: (0-255)<br>
+    <input type="number" id='red' value='0'><br>
 
-    Width changes<br>
-    <input type='number' id='myWidth' value='200' oninput='changeStyle()'><br>
+    Green: (0-255)<br>
+    <input type="number" id='green' value='0'><br>
 
-    Target<br>
-    <div id='box' style='border: 1px solid black; padding: 10px; width 200x;'>
-    </div>
+    Blue: (0-255)<br>
+    <input type="number" id='blue' value='0'><br>
 
+    Border Width<br>
+    <input type="number" id='width' value='1'><br>
+
+    <button onclick='changeStyle()'>Change</button><br><br>
+
+    <div id='box' style="border: 1px solid black line: padding: 10px;">
+	    <div>
     <script>
 	    function changeStyle() {
-		    var color = document.getElementById("myColor").value;
-		    var width = document.getElementById("myWidth").value;
-		    document.getElementById("box").style.color = color;
-		    document.getElementById("box").style.width = width + 'px';
+		    var r = document.getElementById("red").value;
+		    var g = document.getElementById("green").value;
+		    var b = document.getElementById("blue").value;
+		    var w = document.getElementById("width").value;
+
+		    var box document.getElementById("box");
+		    box.style.color = "rgb(" + r + ", " + g + "," + b + ")";
+		    box.style.borderWidth = w + "px";
 	    }
+
+
+
 	<script>
 		   
 
